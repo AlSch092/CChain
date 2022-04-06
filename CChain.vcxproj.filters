@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{9e23a7ae-9825-41f1-96bc-2febde29cba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{b27c908f-f04f-4074-96b6-da1a68a3a4e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Identity">
+      <UniqueIdentifier>{7c5cf502-bd90-4efe-b948-60fba3332a1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MerkleTree">
+      <UniqueIdentifier>{21017028-1121-4915-9143-8e46d1f9af00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CChain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Blockchain.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CConnector.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="markle_tree.cpp">
+      <Filter>MerkleTree</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="node.cpp">
+      <Filter>MerkleTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Transaction.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Blockchain.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CConnector.hpp">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="picosha2.h">
+      <Filter>MerkleTree</Filter>
+    </ClInclude>
+    <ClInclude Include="node.h">
+      <Filter>MerkleTree</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.h">
+      <Filter>MerkleTree</Filter>
+    </ClInclude>
+    <ClInclude Include="merkle_tree.hpp">
+      <Filter>MerkleTree</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Transaction.hpp">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
