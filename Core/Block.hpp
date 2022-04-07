@@ -1,6 +1,6 @@
 #ifndef TESTCHAIN_BLOCK_H
 #define TESTCHAIN_BLOCK_H
-#define BLOCK_MAX_TRANSACTIONS 100 //41~ bytes per transaction?
+#define BLOCK_MAX_TRANSACTIONS 100 //this needs to be calculated in some sophisticated way... each transaction gets x bytes of data, and we have a list of transactions, with each block containing some fixed number of transactions..
 
 #pragma once
 #include <cstdint>
