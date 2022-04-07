@@ -36,7 +36,7 @@ void Block::MineBlock(uint32_t nDifficulty)
         sHash = _CalculateHash();
         printf("sHash: %s\n", sHash.c_str());
 
-    } while (sHash.substr(0, nDifficulty) != str); //sHash: 7c924faf229ebf1f0b5a81644b33d0265d0637735779ace4b614cfb50e73639d
+    } while (sHash.substr(0, nDifficulty) != str); //sHash: 7c924faf229ebf1f0b5a81644b33d0265d0637735779ace4b614cfb50e73639d. for a 'good enough' case, the first nDifficlty digits must be '0', such as 00000faf229ebf...
 
     cout << "Block mined: " << sHash << endl;
 
