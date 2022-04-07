@@ -24,4 +24,3 @@ Blockchain* Blockchain::GetFullChain()
     Blockchain* b = new Blockchain();
     return b;
 }
-
