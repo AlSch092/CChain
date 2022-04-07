@@ -4,8 +4,8 @@
 #include <cstdint>
 #include <vector>
 #include "Block.hpp"
-#include "CConnector.hpp"
-#include "merkle_tree.hpp"
+#include "../Network/CConnector.hpp"
+#include "../MerkleTree/merkle_tree.hpp"
 
 using namespace std;
 
