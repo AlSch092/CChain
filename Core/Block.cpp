@@ -1,19 +1,12 @@
 #include "Block.hpp"
 #include "sha256.hpp"
 
-Block::Block(uint32_t nIndexIn, const string& sDataIn) : _nIndex(nIndexIn), _sData(sDataIn)
+Block::Block(uint32_t nIndexIn, uint32_t nDifficulty, const string& sDataIn) : _nIndex(nIndexIn), _nDifficulty(nDifficulty), _sData(sDataIn)
 {
     _nNonce = 0;
     _tTime = time(nullptr);
     sHash = _CalculateHash();
-}
-
-Block::Block(const string& sDataIn) : _sData(sDataIn)
-{
-    _nNonce = 0;
-    _tTime = time(nullptr);
-    sHash = _CalculateHash();
-
+    SetIndex(nIndexIn);
 }
 
 void Block::MineBlock(uint32_t nDifficulty)
@@ -28,7 +21,7 @@ void Block::MineBlock(uint32_t nDifficulty)
 
     string str(cstr);
 
-    printf("str: %s, cstr: %s\n", cstr, str.c_str());
+    printf("str: %s, cstr: %s\n", str.c_str(), cstr);
 
     do
     {
@@ -36,7 +29,7 @@ void Block::MineBlock(uint32_t nDifficulty)
         sHash = _CalculateHash();
         printf("sHash: %s\n", sHash.c_str());
 
-    } while (sHash.substr(0, nDifficulty) != str); //sHash: 7c924faf229ebf1f0b5a81644b33d0265d0637735779ace4b614cfb50e73639d. for a 'good enough' case, the first nDifficlty digits must be '0', such as 00000faf229ebf...
+    } while (sHash.substr(0, nDifficulty) != str); //sHash: 7c924faf229ebf1f0b5a81644b33d0265d0637735779ace4b614cfb50e73639d
 
     cout << "Block mined: " << sHash << endl;
 
@@ -49,4 +42,10 @@ inline string Block::_CalculateHash() const
     ss << _nIndex << sPrevHash << _tTime << _sData << _nNonce;
 
     return sha256(ss.str());
+}
+
+bool Block::SetNeighbor(Block* neighbor, bool LeftRightNeighbor)
+{
+
+
 }
